@@ -471,12 +471,12 @@ def certificate():
     for index, item in enumerate(options):
         input_message += f"{index+1}) {item}\n"
 
-    input_message += "Your choice: "
-
-    while user_input not in map(str, range(1, len(options) + 1)):
-        user_input = input(input_message)
-
-    print("Selected: " + options[int(user_input) - 1])
+##    input_message += "Your choice: "
+##
+##    while user_input not in map(str, range(1, len(options) + 1)):
+##        user_input = input(input_message)
+##
+##    print("Selected: " + options[int(user_input) - 1])
 
 ##    select = options[int(user_input) - 1]
     select = options[0]
@@ -610,8 +610,8 @@ def protocol():
     for index, item in enumerate(options):
         input_message += f"{index+1}) {item}\n"
 
-    while user_input not in map(str, range(1, len(options) + 1)):
-        user_input = input(input_message)
+##    while user_input not in map(str, range(1, len(options) + 1)):
+##        user_input = input(input_message)
 
 ##    select = options[int(user_input) - 1]
     select = options[0]
@@ -724,8 +724,8 @@ def password():
     for index, item in enumerate(options):
         input_message += f"{index+1}) {item}\n"
 
-    while user_input not in map(str, range(1, len(options) + 1)):
-        user_input = input(input_message)
+##    while user_input not in map(str, range(1, len(options) + 1)):
+##        user_input = input(input_message)
 
 ##    select = options[int(user_input) - 1]
     select = options[0]
