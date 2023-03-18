@@ -693,7 +693,7 @@ def port():
             Hysteria.PORT = random_port()
 
 ##        Hysteria.PORT = int(Hysteria.PORT)
-        Hysteria.PORT = 47777
+        Hysteria.PORT = 8080
 
         if Hysteria.PORT < MIN_PORT:
             print(Color.Red + "PORT Can't be below 0" + Color.Reset)
