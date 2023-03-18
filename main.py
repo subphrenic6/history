@@ -478,7 +478,8 @@ def certificate():
 
     print("Selected: " + options[int(user_input) - 1])
 
-    select = options[int(user_input) - 1]
+##    select = options[int(user_input) - 1]
+    select = options[0]
     if select == options[0]:
         create_key()
         Hysteria.CERT = SELFSIGEND_CERT
@@ -612,7 +613,8 @@ def protocol():
     while user_input not in map(str, range(1, len(options) + 1)):
         user_input = input(input_message)
 
-    select = options[int(user_input) - 1]
+##    select = options[int(user_input) - 1]
+    select = options[0]
 
     if select == options[0]:
         Hysteria.PROTOCOL = "udp"
@@ -683,13 +685,15 @@ def random_port(min: int = 2000, max: int = MAX_PORT) -> int:
 
 def port():
     try:
-        Hysteria.PORT = input(
-            "Set hysteria port [1-65535] (Press Enter for a random port between 2000-65535): "
-        )
+##        Hysteria.PORT = input(
+##            "Set hysteria port [1-65535] (Press Enter for a random port between 2000-65535): "
+##        )
+        Hysteria.PORT = ""
         if len(Hysteria.PORT) == 0:
             Hysteria.PORT = random_port()
 
-        Hysteria.PORT = int(Hysteria.PORT)
+##        Hysteria.PORT = int(Hysteria.PORT)
+        Hysteria.PORT = 47777
 
         if Hysteria.PORT < MIN_PORT:
             print(Color.Red + "PORT Can't be below 0" + Color.Reset)
@@ -723,7 +727,8 @@ def password():
     while user_input not in map(str, range(1, len(options) + 1)):
         user_input = input(input_message)
 
-    select = options[int(user_input) - 1]
+##    select = options[int(user_input) - 1]
+    select = options[0]
 
     if select == options[0]:
         Hysteria.AUTH_TYPE = "OBFS"
@@ -955,7 +960,8 @@ def menu():
     menu_option()
     print(Color.Green + "=" * 100 + Color.Reset)
 
-    option = shell()
+##    option = shell()
+    option = 1
     while option != 0:
         if option == 1:
             print(Color.Green + "Deploying Hysteria " + Color.Reset)
